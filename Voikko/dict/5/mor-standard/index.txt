@@ -1,0 +1,10 @@
+Voikko-Dictionary-Format: 5
+Language: fi-x-standard
+Copyright: 2006-2020 Hannu Väisänen, Harri Pitkänen, Teemu Likonen and others
+License: GPL version 2 or later
+Description: suomi (perussanasto)
+SM-Version: 2.3
+SM-Patchinfo: Development snapshot
+Build-Config: GENLEX_OPTS=
+Build-Date: Sat, 28 Nov 2020 21:31:53 +0000
+Morphology-Backend: finnishVfst
