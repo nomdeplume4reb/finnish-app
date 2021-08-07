@@ -1,5 +1,3 @@
-#C:/Users/rache/Downloads/portfolio-website/Finnish_app/finnish-app.py
-
 from flask import Flask, render_template, request, redirect
 
 from nltk.tokenize import sent_tokenize
@@ -8,8 +6,8 @@ from nltk.tokenize import RegexpTokenizer
 from random import randint, shuffle
 import random
 import re
-import requests # library to handle requests
-from bs4 import BeautifulSoup # library to parse HTML documents
+import requests
+from bs4 import BeautifulSoup
 
 import libvoikko
 from libvoikko import Voikko
