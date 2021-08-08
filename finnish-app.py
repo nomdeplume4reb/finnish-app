@@ -12,20 +12,11 @@ from bs4 import BeautifulSoup
 import libvoikko
 from libvoikko import Voikko
 
-# import os
-# dirname = os.path.dirname(os.path.abspath(__file__))
-# voikkoPath = 'r'+'"'+os.path.join(dirname, 'Voikko')+'"'
-# voikkoDictPath = 'r'+'"'+os.path.join(dirname, 'Voikko\dict')+'"'
-# # print(voikkoPath)
-# # print(voikkoDictPath)
+# Voikko.setLibrarySearchPath(r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko")
 #
-# Voikko.setLibrarySearchPath(voikkoPath)
-#
-# v = libvoikko.Voikko("fi", voikkoDictPath)
+# v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict")
 
-Voikko.setLibrarySearchPath(r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko")
-
-v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict")
+v = libvoikko.Voikko(u"fi")
 
 app = Flask(__name__)
 
