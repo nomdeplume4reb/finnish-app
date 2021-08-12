@@ -20,7 +20,7 @@ v = libvoikko.Voikko("fi", voikkoDictPath) # ERROR: 'Voikko' object has no attri
 
 v = libvoikko.Voikko("fi") # ERROR: 'Voikko' object has no attribute '_Voikko__handle'
 
-v = Voikko("fi")
+v = Voikko("fi")  # 2 ERRORs: 'Voikko' object has no attribute '_Voikko__handle' AND code=H10 desc="App crashed" method=GET path="/favicon.ico
 
 lemmatized = v.analyze('kissa')[0]
 
