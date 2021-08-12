@@ -9,18 +9,17 @@ voikkoDictPath = 'r'+'"'+os.path.join(dirname, 'Voikko\dict')+'"'
 # print('r"C:\\Users\\rache\\Downloads\\data_science\\finnish-app\\Voikko"')
 # print(voikkoDictPath)
 # print('r"C:\\Users\\rache\\Downloads\\data_science\\finnish-app\\Voikko\\dict"')
-#
-Voikko.setLibrarySearchPath(r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko")
 
-v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict")
-
-# Voikko.setLibrarySearchPath(voikkoPath)
+# Voikko.setLibrarySearchPath(r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko")
 #
-# v = libvoikko.Voikko("fi", voikkoDictPath)
+# v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict") # ERROR: 'Voikko' object has no attribute '_Voikko__handle'
+
+#v = libvoikko.Voikko(u"fi") # ERROR: no valid dictionaries found
+
+Voikko.setLibrarySearchPath(voikkoPath)
+
+v = libvoikko.Voikko("fi", voikkoDictPath) # ERROR: 'Voikko' object has no attribute '_Voikko__handle'
 
 lemmatized = v.analyze('kissa')[0]
 
 print(lemmatized)
-
-# ERROR
-#'Voikko' object has no attribute '_Voikko__handle'

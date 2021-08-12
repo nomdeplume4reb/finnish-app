@@ -15,8 +15,8 @@ from libvoikko import Voikko
 # Voikko.setLibrarySearchPath(r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko")
 #
 # v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict")
-
-v = libvoikko.Voikko(u"fi")
+#
+v = libvoikko.Voikko("fi")
 
 app = Flask(__name__)
 
