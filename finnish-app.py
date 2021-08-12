@@ -16,7 +16,7 @@ from libvoikko import Voikko
 #
 # v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict")
 #
-v = libvoikko.Voikko(u"fi")
+v = Voikko("fi")
 
 app = Flask(__name__)
 
