@@ -20,6 +20,8 @@ Voikko.setLibrarySearchPath(voikkoPath)
 
 v = libvoikko.Voikko("fi", voikkoDictPath) # ERROR: 'Voikko' object has no attribute '_Voikko__handle'
 
+v = libvoikko.Voikko("fi") # ERROR: 'Voikko' object has no attribute '_Voikko__handle'
+
 lemmatized = v.analyze('kissa')[0]
 
 print(lemmatized)
