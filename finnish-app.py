@@ -160,6 +160,7 @@ app = Flask(__name__)
 #         return fill_in_blank, options, word
 #     else: return practice()
 
+# TESTING WIHTOUT VOIKKO
 def practice():
 
     yle_url = 'https://yle.fi/uutiset/osasto/selkouutiset/'
@@ -272,12 +273,12 @@ def practice():
     #set options from selected word and randomly selected cases
     if len(cases) > 0:
         num = randint(0, len(cases)-1)
-        option_2 = cases[num].replace('-', '').replace('(', '').replace(')', '')
+        option_2 = 'test1'
 
         num = randint(0, len(cases)-1)
-        option_3 = cases[num].replace('-', '').replace('(', '').replace(')', '')
+        option_3 = 'test2'
 
-        options = [word, option_2, option_3]
+        options = ['test0', option_2, option_3]
 
         options = random.sample(options, len(options))
 
