@@ -1,1 +1,1 @@
-web: gunicorn finnish-app.wsgi 
+gunicorn finnish-app.finnish.wsgi:application --log-file -
