@@ -192,8 +192,6 @@ def practice():
 
     article_list = [sent for sent in article_list if not '\n' in sent]
 
-    print(article_list)
-
     pattern = RegexpTokenizer(r'\w+')
 
     # Split into sentences
@@ -201,8 +199,6 @@ def practice():
     num = randint(0, len(article_list)-1)
 
     sentence = article_list[num]
-
-    #print('Sent: '+ sentence)
 
     # Tokenize sentence, remove punctuation, numbers, and capitalized words (to avoid proper nouns).
 
@@ -218,16 +214,9 @@ def practice():
 
     fill_in_blank = sentence.replace(' '+word, ' _____ ')
 
-    #print('Word1: '+word)
-    #print("blank1: "+fill_in_blank)
+    word_baseform = 'asia'
+    word_class = 'nimisana'
 
-    word_baseform = 'olla'
-    word_class = 'teosana'
-
-    #print('Lemm: '+word_baseform, word_class)
-
-    #Extract the base form
-    #word_baseform = voikko_dict[0]['BASEFORM']
     cases = []
 
     wikiurl = ''
@@ -279,9 +268,6 @@ def practice():
         cases = [char for char in cases if char not in negatives]
 
         cases = list(dict.fromkeys(cases))
-
-    #print(wikiurl)
-    #print(cases)
 
     #set options from selected word and randomly selected cases
     if len(cases) > 0:
