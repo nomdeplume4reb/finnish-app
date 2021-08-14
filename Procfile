@@ -1,1 +1,1 @@
-web: gunicorn finnish-app.wsgi
+web: gunicorn app:finnish-app
