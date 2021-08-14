@@ -9,14 +9,13 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-# import libvoikko
-# from libvoikko import Voikko
-#
-# Voikko.setLibrarySearchPath(r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko")
-#
-# v = libvoikko.Voikko("fi", r"C:\Users\rache\Downloads\data_science\finnish-app\Voikko\dict")
-
-
+import libvoikko
+from libvoikko import Voikko
+dirname = os.path.dirname(os.path.abspath(__file__))
+voikkoPath = 'r'+'"'+os.path.join(dirname, 'Voikko')+'"'
+voikkoDictPath = 'r'+'"'+os.path.join(dirname, 'Voikko\dict')+'"'
+Voikko.setLibrarySearchPath(voikkoPath)
+v = libvoikko.Voikko("fi", voikkoDictPath) # ERROR: 'Voikko' object has no attribute '_Voikko__handle'
 
 app = Flask(__name__)
 
