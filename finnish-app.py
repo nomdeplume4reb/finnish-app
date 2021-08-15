@@ -9,9 +9,9 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-import libvoikko
-from libvoikko import Voikko
-v = libvoikko.Voikko(u"fi")
+# import libvoikko
+# from libvoikko import Voikko
+# v = libvoikko.Voikko(u"fi")
 
 app = Flask(__name__)
 
